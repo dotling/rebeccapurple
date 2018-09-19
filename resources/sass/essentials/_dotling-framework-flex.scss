@@ -1,0 +1,354 @@
+/*
+##### dotling framework ##### start #####
+#                                       #
+#        author: Niklas Döttling        #
+#              2018, Bremen             #
+#                                       #
+#########################################
+*/
+
+// #### responsive ##### start #####
+
+$tablet: 768px;
+$phone: 480px;
+
+// #### mixins ##### start #####
+
+@mixin flex-direction($property) {
+    flex-direction: ($property);
+}
+
+@mixin justify-content($property) {
+    justify-content: ($property);
+}
+
+@mixin align-items($property) {
+    align-items: ($property);
+}
+
+@mixin flex-wrap($property) {
+    flex-wrap: ($property);
+}
+
+// #### mixins ##### end #####
+
+// #### class ##### start #####
+
+// #### desktop ##### start #####
+
+.dotling,
+.nd {
+    display: flex;
+
+    &__horizontal,
+    &__h {
+        @include flex-direction(row);
+
+        &--reverse {
+            @include flex-direction(row-reverse);
+        }
+    }
+
+    &__vertical,
+    &__v {
+        @include flex-direction(column);
+
+        &--reverse {
+            @include flex-direction(column-reverse);
+        }
+    }
+
+    &__justify-content,
+    &__jc {
+        &--center,
+        &--c {
+            @include justify-content(center);
+        }
+
+        &--start,
+        &--s {
+            @include justify-content(flex-start);
+        }
+
+        &--end,
+        &--e {
+            @include justify-content(flex-end);
+        }
+
+        &--space-between,
+        &--sb {
+            @include justify-content(space-between);
+        }
+
+        &--space-around,
+        &--sa {
+            @include justify-content(space-around);
+        }
+    }
+
+    &__align-items,
+    &__ai {
+        &--center,
+        &--c {
+            @include align-items(center);
+        }
+
+        &--start,
+        &--s {
+            @include align-items(flex-start);
+        }
+
+        &--end,
+        &--e {
+            @include align-items(flex-end);
+        }
+
+        &--baseline,
+        &--b {
+            @include align-items(baseline);
+        }
+
+        &--stretch,
+        &--st {
+            @include align-items(stretch);
+        }
+    }
+
+    &__wrap,
+    &__w {
+        @include flex-wrap(wrap);
+
+        &--wrap,
+        &--w {
+            @include flex-wrap(wrap);
+        }
+
+        &--nowrap,
+        &--no {
+            @include flex-wrap(nowrap);
+        }
+
+        &--wrap-reverse,
+        &--wr {
+            @include flex-wrap(wrap-reverse);
+        }
+    }
+}
+
+// #### desktop ##### end #####
+
+// #### tablet ##### start #####
+
+@media only screen and (max-width: $tablet) {
+    .dotling-tablet,
+    .nd-tablet {
+        display: flex;
+
+        &__horizontal,
+        &__h {
+            @include flex-direction(row);
+
+            &--reverse {
+                @include flex-direction(row-reverse);
+            }
+        }
+
+        &__vertical,
+        &__v {
+            @include flex-direction(column);
+
+            &--reverse {
+                @include flex-direction(column-reverse);
+            }
+        }
+
+        &__justify-content,
+        &__jc {
+            &--center,
+            &--c {
+                @include justify-content(center);
+            }
+
+            &--start,
+            &--s {
+                @include justify-content(flex-start);
+            }
+
+            &--end,
+            &--e {
+                @include justify-content(flex-end);
+            }
+
+            &--space-between,
+            &--sb {
+                @include justify-content(space-between);
+            }
+
+            &--space-around,
+            &--sa {
+                @include justify-content(space-around);
+            }
+        }
+
+        &__align-items,
+        &__ai {
+            &--center,
+            &--c {
+                @include align-items(center);
+            }
+
+            &--start,
+            &--s {
+                @include align-items(flex-start);
+            }
+
+            &--end,
+            &--e {
+                @include align-items(flex-end);
+            }
+
+            &--baseline,
+            &--b {
+                @include align-items(baseline);
+            }
+
+            &--stretch,
+            &--st {
+                @include align-items(stretch);
+            }
+        }
+
+        &__wrap,
+        &__w {
+            @include flex-wrap(wrap);
+
+            &--wrap,
+            &--w {
+                @include flex-wrap(wrap);
+            }
+
+            &--nowrap,
+            &--no {
+                @include flex-wrap(nowrap);
+            }
+
+            &--wrap-reverse,
+            &--wr {
+                @include flex-wrap(wrap-reverse);
+            }
+        }
+    }
+}
+
+// #### tablet ##### end #####
+
+// #### phone ##### start #####
+
+@media only screen and (max-width: $phone) {
+    .dotling-phone,
+    .nd-phone {
+        display: flex;
+
+        &__horizontal,
+        &__h {
+            @include flex-direction(row);
+
+            &--reverse {
+                @include flex-direction(row-reverse);
+            }
+        }
+
+        &__vertical,
+        &__v {
+            @include flex-direction(column);
+
+            &--reverse {
+                @include flex-direction(column-reverse);
+            }
+        }
+
+        &__justify-content,
+        &__jc {
+            &--center,
+            &--c {
+                @include justify-content(center);
+            }
+
+            &--start,
+            &--s {
+                @include justify-content(flex-start);
+            }
+
+            &--end,
+            &--e {
+                @include justify-content(flex-end);
+            }
+
+            &--space-between,
+            &--sb {
+                @include justify-content(space-between);
+            }
+
+            &--space-around,
+            &--sa {
+                @include justify-content(space-around);
+            }
+        }
+
+        &__align-items,
+        &__ai {
+            &--center,
+            &--c {
+                @include align-items(center);
+            }
+
+            &--start,
+            &--s {
+                @include align-items(flex-start);
+            }
+
+            &--end,
+            &--e {
+                @include align-items(flex-end);
+            }
+
+            &--baseline,
+            &--b {
+                @include align-items(baseline);
+            }
+
+            &--stretch,
+            &--st {
+                @include align-items(stretch);
+            }
+        }
+
+        &__wrap,
+        &__w {
+            @include flex-wrap(wrap);
+
+            &--wrap,
+            &--w {
+                @include flex-wrap(wrap);
+            }
+
+            &--nowrap,
+            &--no {
+                @include flex-wrap(nowrap);
+            }
+
+            &--wrap-reverse,
+            &--wr {
+                @include flex-wrap(wrap-reverse);
+            }
+        }
+    }
+}
+
+// #### phone ##### end #####
+
+// #### class ##### end #####
+
+/*
+##### dotling framework ##### end #####
+*/
