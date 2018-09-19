@@ -1,0 +1,31 @@
+{
+  "name": "dotling",
+  "version": "0.0.1",
+  "description": "personal portfolio from Niklas Döttling",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development ./resources/js/main.js --output ./dist/main.js",
+    "build": "webpack --mode production ./resources/js/main.js --output ./dist/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dotling/rebeccapurple.git"
+  },
+  "author": "Niklas Döttling",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dotling/rebeccapurple/issues"
+  },
+  "homepage": "https://github.com/dotling/rebeccapurple#readme",
+  "devDependencies": {
+    "autoprefixer": "^9.1.5",
+    "css-loader": "^1.0.0",
+    "mini-css-extract-plugin": "^0.4.3",
+    "node-sass": "^4.9.3",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.0",
+    "webpack": "^4.19.1",
+    "webpack-cli": "^3.1.0"
+  }
+}
