@@ -4,7 +4,7 @@
 
 > crafted with <3 by Niklas Döttling - Bremen, 2018
 
-## Dpendencies
+## Depndencies
 
 > * npm install webpack webpack-cli --save-dev
 * npm install extract-text-webpack-plugin --save-dev
