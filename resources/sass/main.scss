@@ -1,7 +1,13 @@
-$black: black;
+@import 'variables/color';
+@import 'variables/space';
+@import 'variables/typo';
+@import 'variables/mixin';
 
-body {
-    background-color: $black;
-    display: flex;
-    justify-content: center;
-}
+@import 'components/button';
+@import 'components/navigation';
+
+@import 'essentials/base';
+@import 'essentials/dotling-framework';
+
+@import 'sections/header';
+@import 'sections/footer';
