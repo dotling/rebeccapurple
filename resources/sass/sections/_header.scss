@@ -1,0 +1,8 @@
+.header {
+    background-image: url("/resources/img/background/hills.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include fullscreen;
+}

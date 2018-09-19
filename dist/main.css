@@ -1,15 +1,5 @@
 @charset "UTF-8";
 /*
-##### start #####
-
-dotling Framework
-author: Niklas Döttling
-
-*/
-/*
-##### end #####
-*/
-/*
 ##### dotling framework ##### start #####
 #                                       #
 #        author: Niklas Döttling        #
@@ -439,6 +429,53 @@ author: Niklas Döttling
 /*
 ##### dotling framework ##### end #####
 */
+.dotling__margin-top--1,
+.nd__margin-top--1 {
+  margin-top: 10px; }
+
+.dotling__margin-top--2,
+.nd__margin-top--2 {
+  margin-top: calc(10px * 2); }
+
+.dotling__margin-top--3,
+.nd__margin-top--3 {
+  margin-top: calc(10px * 3); }
+
+.dotling__margin-top--4,
+.nd__margin-top--4 {
+  margin-top: calc(10px * 4); }
+
+.dotling__margin-top--5,
+.nd__margin-top--5 {
+  margin-top: calc(10px * 5); }
+
+.dotling__margin-top--6,
+.nd__margin-top--6 {
+  margin-top: calc(10px * 6); }
+
+.dotling__margin-top--7,
+.nd__margin-top--7 {
+  margin-top: calc(10px * 7); }
+
+.dotling__margin-top--8,
+.nd__margin-top--8 {
+  margin-top: calc(10px * 8); }
+
+.dotling__margin-top--9,
+.nd__margin-top--9 {
+  margin-top: calc(10px * 9); }
+
+.dotling__margin-top--10,
+.nd__margin-top--10 {
+  margin-top: calc(10px * 10); }
+
+.header {
+  background-image: url("/resources/img/background/hills.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh; }
 
 
 /*# sourceMappingURL=main.css.map*/

@@ -1,0 +1,52 @@
+$space-basis: 10px;
+
+@media only screen and (max-width:$tablet) {
+    $space-basis: 8px;
+}
+
+@media only screen and (max-width:$phone) {
+    $space-basis: 6px;
+}
+
+.dotling,
+.nd {
+    &__margin-top--1 {
+        margin-top: $space-basis;
+    }
+
+    &__margin-top--2 {
+        margin-top: calc(#{$space-basis} * 2);
+    }
+
+    &__margin-top--3 {
+        margin-top: calc(#{$space-basis} * 3);
+    }
+
+    &__margin-top--4 {
+        margin-top: calc(#{$space-basis} * 4);
+    }
+
+    &__margin-top--5 {
+        margin-top: calc(#{$space-basis} * 5);
+    }
+
+    &__margin-top--6 {
+        margin-top: calc(#{$space-basis} * 6);
+    }
+
+    &__margin-top--7 {
+        margin-top: calc(#{$space-basis} * 7);
+    }
+
+    &__margin-top--8 {
+        margin-top: calc(#{$space-basis} * 8);
+    }
+
+    &__margin-top--9 {
+        margin-top: calc(#{$space-basis} * 9);
+    }
+
+    &__margin-top--10 {
+        margin-top: calc(#{$space-basis} * 10);
+    }
+}
