@@ -2,8 +2,10 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
+const PostcssClean = require('postcss-clean')
 
 module.exports = {
+    target: 'web',
     devtool: 'source-map',
     entry: { main: './resources/js/main.js' },
     output: {
@@ -15,11 +17,34 @@ module.exports = {
             {
                 test: /\.scss$/,
                 use: [
-                    'style-loader', 
+                    {
+                        loader: 'style-loader'
+                    }, 
                     MiniCssExtractPlugin.loader, 
-                    'css-loader', 
-                    'postcss-loader', 
-                    'sass-loader'
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }, 
+                    {
+                        loader: 'postcss-loader',
+                        options: {
+                            sourceMap: true,
+                            plugins: [
+                                autoprefixer({
+                                    browsers: [">1%", "last 4 versions"]
+                                }),
+                                PostcssClean({})
+                            ]
+                        }
+                    }, 
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            sourceMap: true
+                        }
+                    }
                 ]
             }
         ]
