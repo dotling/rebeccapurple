@@ -8,10 +8,14 @@ $space-basis: 10px;
     $space-basis: 6px;
 }
 
+$top: top;
+$bottom: bottom;
+@for $i from 1 through 100 {}
+
 .dotling,
 .nd {
-    &__margin-top--1 {
-        margin-top: $space-basis;
+    &__margin-#{$top}--#{$i} {
+        margin-top: #{$i}px;
     }
 
     &__margin-top--2 {
