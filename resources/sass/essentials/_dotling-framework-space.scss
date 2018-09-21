@@ -1,56 +1,26 @@
-$space-basis: 10px;
+$directions: (
+    top, left, right, bottom
+);
 
-@media only screen and (max-width:$tablet) {
-    $space-basis: 8px;
+$spacings: (
+    0, 12, 24, 32, 48, 96, 40
+);
+
+@mixin spacing-factory($pos, $i) {
+    &__margin-#{$pos}--#{$i} {
+        margin-#{$pos}: #{$i}px;
+    }
 }
 
-@media only screen and (max-width:$phone) {
-    $space-basis: 6px;
+@mixin make-spacings($spaces, $dir) {
+    @each $i in $spaces {
+        @include spacing-factory($dir, $i);
+    }
 }
-
-$top: top;
-$bottom: bottom;
-@for $i from 1 through 100 {}
 
 .dotling,
 .nd {
-    &__margin-#{$top}--#{$i} {
-        margin-top: #{$i}px;
-    }
-
-    &__margin-top--2 {
-        margin-top: calc(#{$space-basis} * 2);
-    }
-
-    &__margin-top--3 {
-        margin-top: calc(#{$space-basis} * 3);
-    }
-
-    &__margin-top--4 {
-        margin-top: calc(#{$space-basis} * 4);
-    }
-
-    &__margin-top--5 {
-        margin-top: calc(#{$space-basis} * 5);
-    }
-
-    &__margin-top--6 {
-        margin-top: calc(#{$space-basis} * 6);
-    }
-
-    &__margin-top--7 {
-        margin-top: calc(#{$space-basis} * 7);
-    }
-
-    &__margin-top--8 {
-        margin-top: calc(#{$space-basis} * 8);
-    }
-
-    &__margin-top--9 {
-        margin-top: calc(#{$space-basis} * 9);
-    }
-
-    &__margin-top--10 {
-        margin-top: calc(#{$space-basis} * 10);
+    @each $dir in $directions {
+        @include make-spacings($spacings, $dir);
     }
 }
