@@ -2,7 +2,7 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const autoprefixer = require('autoprefixer');
-const PostcssClean = require('postcss-clean')
+// const PostcssClean = require('postcss-clean')
 
 module.exports = {
     target: 'web',
@@ -34,8 +34,8 @@ module.exports = {
                             plugins: [
                                 autoprefixer({
                                     browsers: [">1%", "last 4 versions"]
-                                }),
-                                PostcssClean({})
+                                })
+                                // PostcssClean({})
                             ]
                         }
                     }, 

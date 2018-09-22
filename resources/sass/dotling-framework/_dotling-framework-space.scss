@@ -1,0 +1,56 @@
+$directions: (
+    top, left, right, bottom
+);
+
+$spacings: (
+    0, 10, 20, 40, 80, 160
+);
+
+$spacings-tablet: (
+    0, 10, 20, 40, 80, 160
+);
+
+$spacings-phone: (
+    0, 10, 20, 40, 80, 160
+);
+
+@mixin spacing-factory($position, $number) {
+    &__margin--#{$position}-#{$number} {
+        margin-#{$position}: #{$number}px;
+    }
+    
+    &__padding--#{$position}-#{$number} {
+        padding-#{$position}: #{$number}px;
+    }
+}
+
+@mixin make-spacings($spaces, $dir) {
+    @each $number in $spaces {
+        @include spacing-factory($dir, $number);
+    }
+}
+
+.dotling,
+.nd {
+    @each $dir in $directions {
+        @include make-spacings($spacings, $dir);
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .dotling-tablet,
+    .nd-tablet {
+        @each $dir in $directions {
+            @include make-spacings($spacings-tablet, $dir);
+        }
+    }
+}
+
+@media only screen and (max-width: $phone) {
+    .dotling-phone,
+    .nd-phone {
+        @each $dir in $directions {
+            @include make-spacings($spacings-phone, $dir);
+        }
+    }
+}

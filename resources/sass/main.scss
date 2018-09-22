@@ -1,3 +1,7 @@
+@import 'dotling-framework/dotling-framework-flex';
+@import 'dotling-framework/dotling-framework-space';
+@import 'dotling-framework/dotling-framework-grid';
+
 @import 'variables/color';
 @import 'variables/space';
 @import 'variables/typo';
@@ -7,8 +11,6 @@
 @import 'components/navigation';
 
 @import 'essentials/base';
-@import 'essentials/dotling-framework-flex';
-@import 'essentials/dotling-framework-space';
 
 @import 'sections/header';
 @import 'sections/footer';

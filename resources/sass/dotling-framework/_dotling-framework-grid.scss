@@ -1,0 +1,110 @@
+// ##### Variables ##### //
+$grid-gap: (
+    10, 20, 30, 40, 50, 60, 70, 80, 90, 100
+);
+
+$grid-start: (
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+);
+
+$grid-end: (
+    1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+);
+
+// ##### grid-start & grid-end ##### //
+
+@mixin grid-factory($position, $number) {
+    &--#{$position}-#{$number} {
+        grid-column-start: #{$position};
+        grid-column-end: calc(#{$number} + 1);
+    }
+}
+
+@mixin make-grid($spaces, $dir) {
+    @each $number in $spaces {
+        @include grid-factory($dir, $number);
+    }
+}
+
+.dotling,
+.nd {
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+
+        @each $dir in $grid-start {
+            @include make-grid($grid-end, $dir);
+        }
+    }
+}
+
+// grid-start & grid-end responsive
+
+@media only screen and (max-width: $tablet) {
+    .dotling-tablet,
+    .nd-tablet {
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+
+            @each $dir in $grid-start {
+                @include make-grid($grid-end, $dir);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $tablet) {
+    .dotling-phone,
+    .nd-phone {
+        &__grid {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+
+            @each $dir in $grid-start {
+                @include make-grid($grid-end, $dir);
+            }
+        }
+    }
+}
+
+// ##### grid-gap ##### //
+
+@mixin grid-gap-factory($grid-gap) {
+    &--#{$grid-gap} {
+        grid-gap: #{$grid-gap};
+    }
+}
+
+@mixin make-grid-gap-factory {
+    @each $grid-gap in $grid-gap{
+        @include grid-gap-factory($grid-gap);
+    }
+}
+
+.dotling,
+    .nd {
+        &__gap {
+            @include make-grid-gap-factory;
+    }
+}
+
+// grid-gap responsive
+
+@media screen and (max-width: $tablet) {
+    .dotling,
+        .nd {
+            &__gap {
+                @include make-grid-gap-factory;
+        }
+    }
+}
+
+@media screen and (max-width: $phone) {
+    .dotling-phone,
+    .nd-phone {
+        &__gap {
+            @include make-grid-gap-factory;
+        }
+    }
+}
