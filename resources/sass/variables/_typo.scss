@@ -1,0 +1,12 @@
+$serif: 'Pacifico', cursive;
+$sans-serif: 'Josefin Sans', sans-serif;
+
+h1 {
+    font-family: $serif;
+    font-size:18em;
+}
+
+a {
+    font-family: $sans-serif;
+    text-decoration: none;
+}

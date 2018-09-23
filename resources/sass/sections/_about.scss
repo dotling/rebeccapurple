@@ -1,0 +1,10 @@
+.about {
+    div {
+        &:nth-child(2) {
+            height: 400px;
+
+            background-image: url("../resources/img/background/star.jpg");
+            background-position: center center;
+        }
+    }
+}

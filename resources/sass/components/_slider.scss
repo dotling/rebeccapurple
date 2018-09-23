@@ -1,0 +1,52 @@
+/* BACKUP: SLIDER IN HEADER 
+.swiper-container {
+    background-color: rgba(28, 8, 28, 0.4);
+    bottom: 65px;
+
+    box-shadow: inset 0px -40px 58px 10px rgba(0,0,0,0.37);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+
+    img {
+        max-height: 35px;
+        filter:grayscale(0.6);
+    }
+
+    &:hover {
+        img {
+            filter: saturate(300%);
+            filter: grayscale(0);
+            transition: 0.2s;
+        }
+    } 
+}
+*/
+
+.swiper-container {
+    background-color: $black;
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+
+        img {
+            max-height: 38px;
+            filter: grayscale(0.75);
+            transition: 3s;
+
+            &:hover {
+                filter: grayscale(0);
+                filter: saturate(200%);
+                transition: filter 3s ease-in;
+            } 
+        }
+    }
+}

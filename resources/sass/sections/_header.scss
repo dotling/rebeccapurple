@@ -1,8 +1,41 @@
 .header {
-    background-image: url("/resources/img/background/hills.jpg");
+    background-image: url("../resources/img/background/hills.jpg");
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
 
     @include fullscreen;
+
+    &__content {
+        height: 90vh;
+        padding-top: 40px;
+        box-sizing: border-box;
+
+        h1 {
+            // border: 4px solid rgba(8, 18, 27, 1);
+            padding: 30px 60px 25px 60px;
+            color: white;
+
+            transform: rotate(-4deg);
+        }
+
+        .form__accent {
+            background-color: $black;
+            padding: 10px 28px;
+
+            width: 376px;
+            transform: rotate(-4deg);
+        }
+
+        .claim {
+            transform: rotate(0deg);
+            margin-top: 20px;
+            font-family: "Josefin Sans", sans-serif;
+            color: #eee;
+            font-size: 1rem;
+            background-color: $black;
+            padding: 12px 20px 10px;
+            cursor: pointer;
+        }
+    }
 }

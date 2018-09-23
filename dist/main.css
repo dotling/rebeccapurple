@@ -2234,13 +2234,172 @@
   .nd-phone__gap--100 {
     grid-gap: 100; } }
 
+h1 {
+  font-family: "Pacifico", cursive;
+  font-size: 18em; }
+
+a {
+  font-family: "Josefin Sans", sans-serif;
+  text-decoration: none; }
+
+.button {
+  padding: 14px 28px;
+  background-color: #1c081c;
+  color: white;
+  cursor: pointer; }
+
+.hover__center {
+  position: relative; }
+  .hover__center:after {
+    position: absolute;
+    height: 3px;
+    width: 0;
+    left: 50%;
+    bottom: 10px;
+    content: "";
+    background-color: #960e29;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+  .hover__center:hover:after {
+    -webkit-transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    -o-transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    transition: 0.25s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    width: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%); }
+
+.nav__main {
+  width: 100%;
+  height: 50px;
+  background-color: #1c081c;
+  opacity: 0.95;
+  position: fixed;
+  z-index: 9; }
+  .nav__main li {
+    height: 100%;
+    width: 100%; }
+  .nav__main a {
+    color: white;
+    height: 100%;
+    width: 100%;
+    opacity: 0.8; }
+    .nav__main a:hover {
+      opacity: 1; }
+
+/* BACKUP: SLIDER IN HEADER 
+.swiper-container {
+    background-color: rgba(28, 8, 28, 0.4);
+    bottom: 65px;
+
+    box-shadow: inset 0px -40px 58px 10px rgba(0,0,0,0.37);
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 15px;
+
+    img {
+        max-height: 35px;
+        filter:grayscale(0.6);
+    }
+
+    &:hover {
+        img {
+            filter: saturate(300%);
+            filter: grayscale(0);
+            transition: 0.2s;
+        }
+    } 
+}
+*/
+.swiper-container {
+  background-color: #1c081c; }
+  .swiper-container .swiper-slide {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 20px; }
+    .swiper-container .swiper-slide img {
+      max-height: 38px;
+      -webkit-filter: grayscale(0.75);
+              filter: grayscale(0.75);
+      -webkit-transition: 3s;
+      -o-transition: 3s;
+      transition: 3s; }
+      .swiper-container .swiper-slide img:hover {
+        -webkit-filter: grayscale(0);
+                filter: grayscale(0);
+        -webkit-filter: saturate(200%);
+                filter: saturate(200%);
+        -webkit-transition: -webkit-filter 3s ease-in;
+        transition: -webkit-filter 3s ease-in;
+        -o-transition: filter 3s ease-in;
+        transition: filter 3s ease-in;
+        transition: filter 3s ease-in, -webkit-filter 3s ease-in; }
+
+html {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden; }
+
+body {
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+  background-color: #f6f6f6; }
+
 .header {
-  background-image: url("/resources/img/background/hills.jpg");
+  background-image: url("../resources/img/background/hills.jpg");
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
   width: 100%;
   height: 100vh; }
+  .header__content {
+    height: 90vh;
+    padding-top: 40px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; }
+    .header__content h1 {
+      padding: 30px 60px 25px 60px;
+      color: white;
+      -webkit-transform: rotate(-4deg);
+          -ms-transform: rotate(-4deg);
+              transform: rotate(-4deg); }
+    .header__content .form__accent {
+      background-color: #1c081c;
+      padding: 10px 28px;
+      width: 376px;
+      -webkit-transform: rotate(-4deg);
+          -ms-transform: rotate(-4deg);
+              transform: rotate(-4deg); }
+    .header__content .claim {
+      -webkit-transform: rotate(0deg);
+          -ms-transform: rotate(0deg);
+              transform: rotate(0deg);
+      margin-top: 20px;
+      font-family: "Josefin Sans", sans-serif;
+      color: #eee;
+      font-size: 1rem;
+      background-color: #1c081c;
+      padding: 12px 20px 10px;
+      cursor: pointer; }
+
+.about div:nth-child(2) {
+  height: 400px;
+  background-image: url("../resources/img/background/star.jpg");
+  background-position: center center; }
 
 
 /*# sourceMappingURL=main.css.map*/

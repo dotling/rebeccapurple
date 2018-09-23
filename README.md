@@ -4,6 +4,8 @@
 
 > crafted with <3 by Niklas Döttling - Bremen, 2018
 
+> includes dotling framework 
+
 ## Depndencies
 
 > * npm install webpack webpack-cli --save-dev

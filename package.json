@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "webpack --mode development ./resources/js/main.js --output ./dist/main.js",
-    "build": "webpack --mode production ./resources/js/main.js --output ./dist/main.js"
+    "build": "webpack --mode production ./resources/js/main.js --output ./dist/main.js",
+    "watch": "webpack --mode production ./resources/js/main.js --output ./dist/main.js --watch"
   },
   "repository": {
     "type": "git",

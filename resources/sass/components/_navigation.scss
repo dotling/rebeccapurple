@@ -1,0 +1,28 @@
+.nav__main {
+    width: 100%;
+    height: 50px;
+
+    background-color:#1c081c;
+    opacity: 0.95;
+
+    position: fixed;
+
+    z-index: 9;
+
+    li {
+        height: 100%;
+        width: 100%;
+    }
+
+    a {
+        color: white;
+        height: 100%;
+        width:100%;
+
+        opacity: 0.8;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
