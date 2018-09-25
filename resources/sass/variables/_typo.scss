@@ -1,12 +1,29 @@
 $serif: 'Pacifico', cursive;
 $sans-serif: 'Josefin Sans', sans-serif;
 
-h1 {
+h1,
+.h1 {
     font-family: $serif;
     font-size:18em;
+}
+
+h2,
+.h2 {
+    font-family: $serif;
+    font-size: 10em;
+}
+
+h3,
+.h3 {
+    font-family: $serif;
+    font-size: 8em;
 }
 
 a {
     font-family: $sans-serif;
     text-decoration: none;
 }
+
+p {}
+
+.small {}
