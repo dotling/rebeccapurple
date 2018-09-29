@@ -2396,6 +2396,16 @@ body {
       padding: 12px 20px 10px;
       cursor: pointer; }
 
+.about div h2 {
+  -webkit-transform: rotate(-4deg);
+      -ms-transform: rotate(-4deg);
+          transform: rotate(-4deg);
+  font-size: 2rem;
+  background-color: #1c081c;
+  padding: 10px 10px 5px 10px;
+  color: white;
+  margin-bottom: 20px; }
+
 .about div:nth-child(2) {
   height: 400px;
   background-image: url("../resources/img/background/star.jpg");

@@ -1,5 +1,13 @@
 .about {
     div {
+        h2 {
+            transform: rotate(-4deg);
+            font-size: 2rem;
+            background-color: $black;
+            padding: 10px 10px 5px 10px;
+            color: white;
+            margin-bottom: 20px;
+        }
         &:nth-child(2) {
             height: 400px;
 
