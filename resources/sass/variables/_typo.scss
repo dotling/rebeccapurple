@@ -1,5 +1,6 @@
 $serif: 'Pacifico', cursive;
 $sans-serif: 'Josefin Sans', sans-serif;
+$flowing-text: 'Libre Franklin', sans-serif;
 
 h1,
 .h1 {
@@ -24,6 +25,11 @@ a {
     text-decoration: none;
 }
 
-p {}
+p {
+    color: $text;
+    font-family: $flowing-text;
+    font-weight: 300;
+    line-height: 1.5em;
+}
 
 .small {}

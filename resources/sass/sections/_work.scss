@@ -1,0 +1,60 @@
+.work {
+    padding-top: 150px;
+    div:first-of-type {
+        h2 {
+            transform: rotate(-4deg);
+            font-size: 2rem;
+            background-color: $black-purple;
+            padding: 10px 16px 9px 10px;
+            color: white;
+            margin-bottom: 20px;
+            width: max-content;
+        }
+    }
+
+    &__list {
+        // background-color: $white;
+        &--entry {
+            background-color: $white;
+            max-width: 350px;
+            display: flex;
+            flex-direction: column;
+
+            .card-content {
+                padding: 25px;
+            }
+
+            h3 {
+                font-size: 2em;
+                color: $black-purple;
+                padding: 0 0 20px 0;
+            }
+
+            p {
+                margin-bottom: 20px;
+            }
+
+            .tag {
+                margin-bottom: 18px;
+            }
+
+            img {
+                max-height: unset !important;
+                width: 100%;
+            }
+
+            a {
+            }
+
+            &:hover {
+                img {
+                    filter: grayscale(0);
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 40px;
+            }
+        }
+    }
+}

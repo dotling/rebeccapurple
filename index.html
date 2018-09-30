@@ -15,12 +15,14 @@
         <!-- Animated CSS
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
         -->
-
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/solid.css" integrity="sha384-VGP9aw4WtGH/uPAOseYxZ+Vz/vaTb1ehm1bwx92Fm8dTrE+3boLfF1SpAtB1z7HW" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/fontawesome.css" integrity="sha384-1rquJLNOM3ijoueaaeS5m+McXPJCGdr5HcA03/VHXxcp2kX2sUrQDmFc3jR5i/C7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/css/swiper.min.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.1/js/swiper.min.js"></script>
-
+        <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
         <link rel="shortcut icon" type="image/x-icon" href="resources/img/asset/favicon.ico">
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:600|Pacifico" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Libre+Franklin:300,400,600" rel="stylesheet"> 
         <link href="resources/font/fa5.otf" rel="stylesheet">
         <link href="resources/css/reset.css" rel="stylesheet">
         <link href="dist/main.css" rel="stylesheet">
@@ -31,7 +33,7 @@
         <aside></aside>
         <nav id="nav__main" class="nav__main nd__grid">
             <ul class="nd nd__jc--sb nd__ai--c nd__grid--4-7">
-                <li><a href="#home" class="nd nd__ai--c nd__jc--c hover__center"><i class="fal fa-home"></i> Home</a></li>
+                <li><a href="#" class="nd nd__ai--c nd__jc--c hover__center"><i class="fal fa-home"></i> Home</a></li>
                 <li><a href="#about" class="nd nd__ai--c nd__jc--c hover__center">About</a></li>
                 <li><a href="#work" class="nd nd__ai--c nd__jc--c hover__center">Work</a></li>
                 <li><a href="#framework" class="nd nd__ai--c nd__jc--c hover__center">Framework</a></li>
@@ -45,7 +47,7 @@
                     <span class="claim">Framework</span>
                 </div>
             </section>
-            <section class="swiper-container">
+            <section class="swiper-container" id="about">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide"><img src="resources/img/logo/sass.png"></div>
                     <div class="swiper-slide"><img src="resources/img/logo/less.png"></div>
@@ -56,12 +58,93 @@
                     <div class="swiper-slide"><img src="resources/img/logo/wordpress.png"></div>
                 </div>
             </section>
-            <section id="about" class="about nd__grid">
-                <div class="nd__grid--1-4 nd nd__jc--c nd__ai--c nd__v">
+            <section class="about nd__grid">
+                <div class="nd__grid--1-6 nd nd__jc--c nd__ai--c nd__v">
                     <h2>About</h2>
                     <p>design. code. konzeption.</p>
                 </div>
-                <div class="nd__grid--5-10"></div>
+                <div class="nd__grid--5-10">
+                    <img src="resources/img/about/laptop.png">
+                </div>
+            </section>
+            <section class="nd__grid about_second">
+                <div class="nd__grid--4-7 nd nd__jc--s nd__ai--c">
+                    <article class="nd__grid">
+                        <header class="nd__grid--1-10">
+                            <h2>Frontend is love</h2>
+                        </header>
+                        <div class="nd__grid--1-9">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere alias, consequuntur laboriosam fugit, dolor quibusdam, cumque repellat commodi dolorem nemo blanditiis molestias exercitationem obcaecati dolores fugiat pariatur vero vel.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere alias, consequuntur laboriosam fugit, dolor quibusdam, cumque repellat commodi dolorem nemo blanditiis molestias exercitationem obcaecati dolores fugiat pariatur vero vel.</p>
+                        </div>
+                    </article>
+                </div>
+                <div class="divider nd__grid--1-10"></div>
+            </section>
+            <section id="work" class="work nd__grid">
+                <div class="nd__grid--4-7">
+                    <h2>Work</h2>
+                </div>
+                <div class="work__list nd__grid--4-10">
+                    <div class="swiper-container-work nd">
+                        <div class="swiper-slide work__list--entry">
+                            <div class="card-image">
+                                <img src="http://dotling.de/src/img/ref-1.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>dotling 1.0</h3>
+                                <div class="tag-container">
+                                    <div class="tag tag__website">WEBSITE</div>
+                                    <div class="tag tag__website--portfolio">PORTFOLIO</div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere alias, consequuntur laboriosam fugit, dolor quibusdam.</p>
+                                <a href=""><i class="fas fa-link"></i> Link</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide work__list--entry">
+                            <div class="card-image">
+                                <img src="http://dotling.de/src/img/ref-1.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>dotling 1.0</h3>
+                                <div class="tag-container">
+                                    <div class="tag tag__website">WEBSITE</div>
+                                    <div class="tag tag__website--portfolio">PORTFOLIO</div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere alias, consequuntur laboriosam fugit, dolor quibusdam.</p>
+                                <a href=""><i class="fas fa-link"></i> Link</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide work__list--entry">
+                            <div class="card-image">
+                                <img src="http://dotling.de/src/img/ref-1.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>dotling 1.0</h3>
+                                <div class="tag-container">
+                                    <div class="tag tag__website">WEBSITE</div>
+                                    <div class="tag tag__website--portfolio">PORTFOLIO</div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere alias, consequuntur laboriosam fugit, dolor quibusdam.</p>
+                                <a href=""><i class="fas fa-link"></i> Link</a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide work__list--entry">
+                            <div class="card-image">
+                                <img src="http://dotling.de/src/img/ref-1.jpg">
+                            </div>
+                            <div class="card-content">
+                                <h3>dotling 1.0</h3>
+                                <div class="tag-container">
+                                    <div class="tag tag__website">WEBSITE</div>
+                                    <div class="tag tag__website--portfolio">PORTFOLIO</div>
+                                </div>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit facere alias, consequuntur laboriosam fugit, dolor quibusdam.</p>
+                                <a href=""><i class="fas fa-link"></i> Link</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
     
             <section class="nd__margin--bottom-80 nd__margin--top-80 nd__grid">

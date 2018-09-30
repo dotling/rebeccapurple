@@ -1,0 +1,22 @@
+.tag-container {
+    display: flex;
+
+    .tag {
+        background-color: $primary;
+        color: $white;
+        padding: 6px 17px 3px 17px;
+        margin-right: 10px;
+        opacity: 0.5;
+        font-size:0.8em;
+
+        &__website {
+            &--portfolio {
+                background-color:#0e6196;
+            }
+        }
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}

@@ -8,4 +8,45 @@ body {
     font-size: 16px;
     font-family: $sans-serif;
     background-color: #f6f6f6;
+    color: $black;
+}
+
+article {
+    h2, .h2 {
+        position: relative;
+        margin-bottom: 25px;
+        color: $black-purple;
+        padding-bottom:30px;
+
+        &:after {
+            position: absolute;
+
+            height: 7px;
+            width: 100px;
+            left: 0%;
+            bottom: 0;
+            content: "";
+            background-color: darken(#dc143c,15%);
+        }
+    }
+
+    p {
+        text-align: justify;
+        margin-bottom: 20px;
+        color: $text;
+    }
+
+    p:first-of-type:first-letter {
+        font-size:2em;
+        color: $black-purple;
+    }
+}
+
+.divider {
+    background-color: $black-purple;
+    height: 50px;
+    width: 100%;
+    transform: rotate(-4deg);
+    padding: 0 10px;
+    margin-left: -5px;
 }

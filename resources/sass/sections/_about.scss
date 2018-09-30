@@ -1,18 +1,36 @@
 .about {
+    position: relative;
+    background: $grey;
+    height: 300px;
+    margin-top: 250px;
+
     div {
         h2 {
             transform: rotate(-4deg);
             font-size: 2rem;
-            background-color: $black;
-            padding: 10px 10px 5px 10px;
+            background-color: $black-purple;
+            padding: 10px 16px 9px 10px;
             color: white;
             margin-bottom: 20px;
         }
-        &:nth-child(2) {
-            height: 400px;
 
-            background-image: url("../resources/img/background/star.jpg");
-            background-position: center center;
+        &:first-child {
+            background-color: $grey;
         }
+        &:nth-child(2) {
+            position: absolute;
+            margin-top: -105px;
+        }
+    }
+}
+
+.about_second {
+    margin-top: 250px;
+    h2 {
+        font-size: 6em;
+    }
+
+    .divider {
+        margin-top: 150px;
     }
 }

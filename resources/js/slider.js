@@ -20,6 +20,19 @@ function stopOnHover() {
     },false);
 };
 
+var swiper2 = new Swiper('.swiper-container-2', {
+
+    loop: true,
+    slidesPerView: 2,
+    autoplay: {
+        autoplaySpeed: 800
+    },
+    cssEase:"cubic-bezier(0.87, 0.03, 0.41, 0.9)",
+    autoplaySpeed: 1,
+    spaceBetween: 30
+});
+
+
 stopOnHover();
 
 export {slider}; 
