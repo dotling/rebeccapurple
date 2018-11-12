@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-##### dotling framework ##### start #####
+##### dotling framework ##### flex ######
 #                                       #
 #        author: Niklas Döttling        #
 #              2018, Bremen             #
@@ -427,7 +427,12 @@
             flex-wrap: wrap-reverse; } }
 
 /*
-##### dotling framework ##### end #####
+##### dotling framework ##### space #####
+#                                       #
+#        author: Niklas Döttling        #
+#              2018, Bremen             #
+#                                       #
+#########################################
 */
 .dotling__margin--top-0,
 .nd__margin--top-0 {
@@ -913,6 +918,14 @@
   .nd-phone__padding--bottom-160 {
     padding-bottom: 160px; } }
 
+/*
+##### dotling framework ##### grid ######
+#                                       #
+#        author: Niklas Döttling        #
+#              2018, Bremen             #
+#                                       #
+#########################################
+*/
 .dotling__grid,
 .nd__grid {
   display: grid;
@@ -2242,12 +2255,13 @@ h1,
 h2,
 .h2 {
   font-family: "Pacifico", cursive;
-  font-size: 10em; }
+  font-size: 6em;
+  color: #2d0c2d; }
 
 h3,
 .h3 {
   font-family: "Pacifico", cursive;
-  font-size: 8em; }
+  font-size: 4em; }
 
 a {
   font-family: "Josefin Sans", sans-serif;
@@ -2260,10 +2274,96 @@ p {
   line-height: 1.5em; }
 
 .button {
-  padding: 14px 28px;
-  background-color: #1c081c;
-  color: white;
-  cursor: pointer; }
+  padding: 14px 28px 12px 28px;
+  background: #2d0c2d;
+  color: wheat;
+  cursor: pointer;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+  position: relative;
+  display: inline-block;
+  -webkit-transform: perspective(1px) translateZ(0);
+          transform: perspective(1px) translateZ(0); }
+  .button:focus {
+    -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+            transform: scale(0.95);
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s; }
+  .button:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    background: #1c081c;
+    z-index: -1;
+    -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .button:hover, .button:active {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    .button:hover:before, .button:active:before {
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+           -o-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+              transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
+
+.button__secondary {
+  padding: 14px 28px 12px 28px;
+  color: #2d0c2d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-shadow: 0px 0px 0px 1px #2d0c2d inset;
+          box-shadow: 0px 0px 0px 1px #2d0c2d inset;
+  position: relative;
+  display: inline-block;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s; }
+  .button__secondary:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: transparent;
+    -webkit-box-shadow: 0px 0px 0px 1px #1c081c inset;
+            box-shadow: 0px 0px 0px 1px #1c081c inset;
+    -webkit-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+            transform: scaleX(0);
+    -webkit-transform-origin: 0 50%;
+        -ms-transform-origin: 0 50%;
+            transform-origin: 0 50%;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+  .button__secondary:hover, .button__secondary:active {
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
+    .button__secondary:hover:before, .button__secondary:active:before {
+      -webkit-transform: scaleX(1);
+          -ms-transform: scaleX(1);
+              transform: scaleX(1);
+      -webkit-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+           -o-transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+              transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
 
 .hover__center {
   position: relative; }
@@ -2426,6 +2526,9 @@ article p:first-of-type:first-letter {
   padding: 0 10px;
   margin-left: -5px; }
 
+strong {
+  font-weight: bold; }
+
 .header {
   background-image: url("../resources/img/background/hills.jpg");
   background-attachment: fixed;
@@ -2452,9 +2555,9 @@ article p:first-of-type:first-letter {
           -ms-transform: rotate(-4deg);
               transform: rotate(-4deg); }
     .header__content .claim {
-      -webkit-transform: rotate(0deg);
-          -ms-transform: rotate(0deg);
-              transform: rotate(0deg);
+      -webkit-transform: rotate(-4deg);
+          -ms-transform: rotate(-4deg);
+              transform: rotate(-4deg);
       margin-top: 20px;
       font-family: "Josefin Sans", sans-serif;
       color: #eee;
@@ -2594,6 +2697,9 @@ article p:first-of-type:first-letter {
     display: none; }
   .swiper-container-work .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
     background: #2d0c2d; }
+
+.framework__header {
+  text-align: center; }
 
 
 /*# sourceMappingURL=main.css.map*/
