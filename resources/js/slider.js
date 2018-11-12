@@ -20,18 +20,25 @@ function stopOnHover() {
     },false);
 };
 
-var swiper2 = new Swiper('.swiper-container-2', {
-
-    loop: true,
-    slidesPerView: 2,
-    autoplay: {
-        autoplaySpeed: 800
+var swiperWork = new Swiper('.swiper-container-work', {
+    slidesPerView: 1.1,
+    spaceBetween: 40,
+    mousewheel: true,
+    freeMode: true,
+    keyboard: {
+        enabled: true,
+        onlyInViewport: false,
     },
-    cssEase:"cubic-bezier(0.87, 0.03, 0.41, 0.9)",
-    autoplaySpeed: 1,
-    spaceBetween: 30
+    // freeModeSticky: true,
+    pagination: {
+        el: '.swiper-pagination',
+        type: 'progressbar',
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });
-
 
 stopOnHover();
 
